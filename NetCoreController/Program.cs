@@ -1,4 +1,4 @@
-using NetCoreController.Controller;
+using NetCoreController.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
