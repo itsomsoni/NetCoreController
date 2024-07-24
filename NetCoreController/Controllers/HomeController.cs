@@ -37,7 +37,7 @@ namespace NetCoreController.Controllers
             return "WelCome To Product Page.";
         }
         [Route("/Employee/Om")]
-        public JsonResult Employee()
+        public IActionResult Employee()
         {
             EmployeeModel employee = new() { EmployeeId = 22099, EmployeeName = "Om", Salary = 27500, Age = 22 };
 
