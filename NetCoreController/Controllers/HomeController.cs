@@ -39,7 +39,7 @@ namespace NetCoreController.Controllers
         [Route("/Employee/Om")]
         public IActionResult Employee()
         {
-            EmployeeModel employee = new() { EmployeeId = 22099, EmployeeName = "Om", Salary = 27500, Age = 22 };
+            EmployeeModel employee = new() { EmployeeId = 22099, EmployeeName = "Om Soni", Salary = 27500, Age = 22 };
 
             return Json(employee);
             //ContentResult

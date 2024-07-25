@@ -8,7 +8,9 @@ namespace NetCoreController.Controllers
         [Route("Books")]
         public IActionResult Book()
         {
-            if (!Request.Query.ContainsKey("IsLogged") && !Request.Query.ContainsKey("BookId"))
+            return RedirectToAction("Books", "Store", null);
+
+            /*if (!Request.Query.ContainsKey("IsLogged") && !Request.Query.ContainsKey("BookId"))
                 return BadRequest();
 
             if (!Request.Query.ContainsKey("IsLogged"))
@@ -26,7 +28,7 @@ namespace NetCoreController.Controllers
                 return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status401Unauthorized);
             //return Unauthorized("User Is Not Logged In.");
 
-            return File("/1.png", "image/png");
+            return File("/1.png", "image/png");*/
         }
     }
 }
