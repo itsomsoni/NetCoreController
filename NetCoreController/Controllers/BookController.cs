@@ -8,7 +8,15 @@ namespace NetCoreController.Controllers
         [Route("Books")]
         public IActionResult Book()
         {
-            return RedirectToAction("Books", "Store", null);
+            //StatusCode = 301 - Moved Permanently
+            //StatusCode = 302 - Moved Temp.
+            //return new RedirectToActionResult("Books", "Store", null, permanent: true);
+
+            //int id = Convert.ToInt32(Request.Query["BookId"]);
+            //bool IsLogged = Convert.ToBoolean(Request.Query["IsLogged"]);
+            //return new LocalRedirectResult($"/Category/Books/{id}/{IsLogged}");
+
+            return new RedirectResult("https://github.com/");
 
             /*if (!Request.Query.ContainsKey("IsLogged") && !Request.Query.ContainsKey("BookId"))
                 return BadRequest();
